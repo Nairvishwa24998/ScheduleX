@@ -1,0 +1,36 @@
+{% extends "layout1.html" %}
+
+{% block title %}
+    Bills Given
+{% endblock %}
+
+{% block main %}
+<table action = "/billsgiven" class = "table table-striped table-dark table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Transacted</th>
+            <th>Fee Quoted</th>
+        </tr>
+    </thead>
+            {% for item in bg %}
+            <tr>
+            <th>{{item["name"]}}</th>
+            <th>{{item["transacted"]}}</th>
+            <th>{{item["fees"]}}</th>
+            </tr>
+            {% endfor %}
+</table>
+
+<form action = "/billsgiven" method = "post">
+    <select name = "casesb">
+        <option disabled selected value = "">Case Name</option>
+        {% for item in bg %}
+        <option value = {{item["name"]}}>{{item["name"]}}</option>
+        {% endfor %}
+    </select>
+     <button class="btn btn-dark" name = "submit" type="submit">Delete</button>
+</form>
+
+
+{% endblock %}

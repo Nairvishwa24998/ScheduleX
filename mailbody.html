@@ -1,0 +1,45 @@
+
+{% block main %}
+<table action = "/crbnb" border='1' style='border-collapse:collapse'>
+    <caption style="font-weight:bold"> Cases received but not billed </caption>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+        {% for item in lis1 %}
+        <tr>
+        <th>{{item["name"]}}</th>
+        <th>{{item["transacted"][:10]}}</th>
+        <th>{{item["transacted"][10:]}}</th>
+        </tr>
+        {% endfor %}
+</table>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<table action = "/bgbnp" border='1' style='border-collapse:collapse'>
+    <caption style="font-weight:bold"> Cases billed but not paid </caption>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    {% for item in lis2 %}
+    <tr>
+        <th>{{item["name"]}}</th>
+        <th>{{item["transacted"][:10]}}</th>
+        <th>{{item["transacted"][10:]}}</th>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

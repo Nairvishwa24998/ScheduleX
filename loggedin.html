@@ -1,0 +1,47 @@
+{% extends "layout1.html" %}
+
+{% block title %}
+    Welcome back to your account
+{% endblock %}
+
+{% block main %}
+    <p class = "larger">Welcome to your <font class = "bluify">Schedule<font class = "redify">X <font color = "black">account, {{username}}.</p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <form action = "/loggedin", method = "post">
+        <div class>
+            {% for item in lis %}
+            <input name = "choice" type="radio" value = {{item}}><p class = "medlarger">{{lis[item]}}</p> 
+            {% endfor %}
+        </div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <div class>
+            <input name = "casename" type = "text" placeholder = "Case Name" class = "form-control">
+        </div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <div class>
+            <input name = "fees" type = "text" placeholder = "Fees" class = "form-control">
+        </div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <div class>
+            <button class="btn btn-primary" name = "submit" type="submit" text = "submit" value = "submit" >Submit</button>
+        </div>
+    </form>
+
+{% endblock %}

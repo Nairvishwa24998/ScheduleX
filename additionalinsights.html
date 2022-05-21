@@ -1,0 +1,32 @@
+{% extends "layout1.html" %}
+
+{% block main %}
+    <p class = "larger"> Deriving insights from information is the most important part of the process.</p>
+    <p class = "larger"></p>
+    <p class = "larger"></p>
+    <p class = "larger"></p>
+    <p class = "larger"></p>
+    <p class = "larger"> If you wish to look at the list of cases, you haven't sent bills for, click on the button below.</p>
+    <p class = "larger"></p>
+    <p class = "larger"></p>
+    <p class = "larger"></p>
+    <p class = "larger"></p>
+    <button class = "btn btn-dark" name = "choicetype" value = "crbnb" type = "submit" onclick="window.location.href='/crbnb'">Click here</button>
+    <p class = "larger"></p>
+    <p class = "larger"></p>
+    <p class = "larger"></p>
+    <p class = "larger"></p>
+    <p class = "larger"> If you wish to look at the list of cases, you haven't been paid for in spite of sending bills, click on the button below.</button>
+    <p class = "larger"></p>
+    <p class = "larger"></p>
+    <p class = "larger"></p>
+    <p class = "larger"></p>
+    <button class = "btn btn-dark" name = "choicetype" value = "bgbnp" type = "submit" onclick="window.location.href='/bgbnp'">Click here</button>
+    <p class = "larger"></p>
+    <p class = "larger"></p>
+    <p class = "larger"></p>
+    <p class = "larger"></p>
+    <p class = "larger">Alternatively, you could have all the above information mailed to you. Click the button below if you wish to receive it in mail</p>
+    <button class = "btn btn-dark" name = "emailinsights" value = "emailinsights" type = "submit" onclick = "window.location.href = '/emailinsights'">Click here</button>
+   
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block main %}
+     <script>
+              function smsg()
+            {
+                let msg = document.querySelector("#msgp");
+                document.querySelector("#msgp").style.color = "green";
+                msg.innerHTML = "I'll add the suggestions tab later. For now, you can just mail it to me";
+            }
+     </script>
+     
+    <p class = "larger text-secondary"> This was created by Viswanath B Nair as a part of the final project for CS50.</p> 
+    <p class = "larger text-secondary"> Constructive Comments and suggestions are appreciated!</p>
+    <p class = "larger text-secondary" id = "Suggestions" onclick = "smsg(); return false"> You can enter them in the Suggestions part or just mail them at nairvishwa32@gmail.com</p>
+    <br>
+    <p id = "msgp"></p>    
+{% endblock %}
+
+

@@ -1,0 +1,9 @@
+{% extends "layout1.html" %}
+{% block main %}
+    <form action = "/edit1", method = "post">
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="New Password" type="password">
+        </div>
+        <button class="btn btn-primary" name = "submit" type="submit">Change Password</button>
+    </form>
+{% endblock %}
